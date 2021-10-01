@@ -1,10 +1,14 @@
 import json
-
+import argparse
 classes = {}
 
 def le_arquivo(nome_arquivo):
     
     arquivo = open(nome_arquivo, "r")
+
+    if not arquivo:
+        print('file not found')
+        exit()
     arquivo_json = json.load(arquivo)
 
     return arquivo_json
@@ -115,12 +119,14 @@ def python_para_java(classe, atributos):
     return imports + codigo
 
 def main():
-    
-    arquivo = le_arquivo("arquivo.json")
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--path', action='store', type=str, help='Caminho para o arquivo', required=True)
+    args = parser.parse_args()
+
+    arquivo = le_arquivo(args.path)
 
     for chave, valor in arquivo.items():
         monta_classes(chave, valor)
-
 
     codigo = ""
     for classe, atributos in classes.items():
@@ -129,7 +135,8 @@ def main():
 
     codigo += main_java()
 
-    print(codigo)
+    arquivo = open("main.java", "w+")
+    arquivo.write(codigo)
 
 if __name__ == '__main__':
     main()
