@@ -1,0 +1,41 @@
+{
+    "Aluno": [
+        {
+            "nome": "José",
+            "cpf": "12341234",
+            "telefone": "9999999",
+            "Turma": [
+                {
+                    "codigo": "aaa",
+                    "sala": "bbbb"
+                },
+                {
+                    "codigo": "aaa",
+                    "sala": "bbbb"
+                }
+
+            ],
+            "Teste": [
+                "a","b"
+            ]
+        },
+        {
+            "nome": "José",
+            "cpf": "12341234",
+            "telefone": "9999999",
+            "Turma": [
+                {
+                    "codigo": "aaa",
+                    "sala": "bbbb"
+                },
+                {
+                    "codigo": "aaa",
+                    "sala": "bbbb"
+                }
+            ],
+            "Teste": [
+                "a","b"
+            ]
+        }
+    ]
+}
