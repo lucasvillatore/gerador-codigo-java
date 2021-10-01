@@ -4,38 +4,19 @@
             "nome": "José",
             "cpf": "12341234",
             "telefone": "9999999",
-            "Turma": [
-                {
-                    "codigo": "aaa",
-                    "sala": "bbbb"
-                },
-                {
-                    "codigo": "aaa",
-                    "sala": "bbbb"
-                }
-
-            ],
-            "Teste": [
-                "a","b"
+            "Amigo": [
+              "lucas",
+              "joao"
             ]
         },
         {
-            "nome": "José",
-            "cpf": "12341234",
+            "nome": "Lucas",
+            "cpf": "12345678",
             "telefone": "9999999",
-            "Turma": [
-                {
-                    "codigo": "aaa",
-                    "sala": "bbbb"
-                },
-                {
-                    "codigo": "aaa",
-                    "sala": "bbbb"
-                }
-            ],
-            "Teste": [
-                "a","b"
-            ]
+            "Amigo": [
+                "joao",
+                "jose"  
+              ]
         }
     ]
 }
