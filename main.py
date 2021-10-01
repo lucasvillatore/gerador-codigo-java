@@ -67,7 +67,6 @@ def monta_classes(nome_classe, instancias):
             
             if (isinstance(valor, list)):
                 if (len(valor) == 0):
-                    print(classes[nome_classe]['list'])
                     if not existe_na_lista(nome_classe, chave):
                         classes[nome_classe]['list'].append({
                             'tipo': chave,
