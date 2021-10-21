@@ -1,21 +1,44 @@
-# gerador_codigo_java
+# Gerador de código Java
 
-*Como usar:*
+Esse relatório tem como objetivo explicar como utilizar o programa de geração de código Java a partir de um arquivo JSON.
+Também lista as ferramentas, detalhes de como funciona a implementação do algoritmo e também exemplos de entrada e saídas.
+
+**Como usar:**
 
 ```bash
     $ python3 main.py --path <caminho-para-arquivo-json>
 ```
 
-*Ver os comandos:*
+**Compilar código Java:**
+
+```bash
+	$ javac main.java
+```
+
+**Executar código Java:**
+
+```bash
+	$ java Principal.java
+```
+
+**Ver os comandos:**
 
 ```bash
     $ python3 main.py -h
 ```
 
 
-O programa irá gerar uma arquivo main.java de acordo com o JSON passado como parâmetro.
+### Ferramentas
+- Python3
+- Libs: 
+  - json
+  - argparse
 
-Observações:
+### Detalhes de implementação
+O programa irá gerar uma arquivo main.java de acordo com o JSON passado como parâmetro.
+Utilizei python3 porque é uma linguaguem que já tenho familiaridade. Utilizo as libs json e argparse para manipulação de arquivos JSON e manipulação de argumentos de entrada.
+
+**Implementação**
 
 É possível criar atributos:
 - String
@@ -25,6 +48,8 @@ Observações:
 sendo classes uma classe existente.
 
 Quando uma chave no JSON possuir como valor, um atributo objeto (ou um array de objetos), o programa interpretará como uma nova classe e os atributos desse JSON serão os atributos dessa classe.
+Para montar todas as classes do código Java, faço uma busca em profundidade nos atributos JSON e monto um grafo de dependências e, a partir desse grafo, eu gero o código Java resultante.
+
 
 Entradas de exemplo:
 ```json
@@ -81,7 +106,7 @@ class Turma {
 	String sala;
 }
 
-class Main {
+class Programa {
 	public static void main (String args[]){}
 }
 ```
@@ -123,7 +148,7 @@ class Aluno {
 	ArrayList<String> amigos;
 }
 
-class Main {
+class Programa {
 	public static void main (String args[]){}
 }
 ```

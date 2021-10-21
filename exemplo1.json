@@ -1,0 +1,22 @@
+{
+    "Aluno": [
+        {
+            "nome": "José",
+            "cpf": "12341234",
+            "telefone": "9999999",
+            "Amigo": [
+                "lucas",
+                "joao"
+            ]
+        },
+        {
+            "nome": "Lucas",
+            "cpf": "12345678",
+            "telefone": "9999999",
+            "Amigo": [
+                "joao",
+                "jose"
+            ]
+        }
+    ]
+}

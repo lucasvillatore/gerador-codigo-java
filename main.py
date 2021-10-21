@@ -17,7 +17,7 @@ def main_java():
     
     main_class = [
         "class",
-        "Main"
+        "Programa"
     ]
     args = [
         'public',
